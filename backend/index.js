@@ -9,11 +9,16 @@ const verifyToken = require('./middlewares/verifyToken.js');
 // allow cors 
 app.use(allowOrigin);
 
+//make public folder accessible
+app.use(express.static(__dirname + '/public'));
+
 // JSON is a data format that is used to exchange data between a server and a client.
 app.use(express.json());
 app.get("/", (req, res) => {
     res.json({
-        message: "Server is running on port 8080"
+        message: "Server is running on port 8080",
+        method:req.method,
+        url:req.url
     });
 })
 
