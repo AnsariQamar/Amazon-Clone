@@ -23,7 +23,7 @@ export default function Product({ id, name, category, brand, price, image, count
                             </Link>
                         </h3>
                         <div>Category : {category}</div>
-                        <div>Barand: {brand}</div>
+                        <div>Brand: {brand}</div>
                     </div>
                     <div className='wrapper'>
                         <div className='price'>
